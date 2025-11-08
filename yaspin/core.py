@@ -97,7 +97,7 @@ def to_unicode(text_type: str | bytes, encoding: str = ENCODING) -> str:
 
 @dataclass
 class Spinner:
-    frames: str
+    frames: str | Sequence[str]
     interval: int
 
 
