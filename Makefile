@@ -6,8 +6,6 @@ name='yaspin'
 # Use $$ if running awk inside make
 # https://lists.freebsd.org/pipermail/freebsd-questions/2012-September/244810.html
 version := $(shell poetry version | awk '{ print $$2 }')
-pypi_usr := $(shell grep username ~/.pypirc | awk -F"= " '{ print $$2 }')
-pypi_pwd := $(shell grep password ~/.pypirc | awk -F"= " '{ print $$2 }')
 
 .PHONY: lint
 lint:
@@ -61,18 +59,6 @@ rm-build:
 build: rm-build
 	@echo "$(OK_COLOR)==> Building...$(NO_COLOR)"
 	@poetry build
-
-.PHONY: publish
-publish: build
-	@echo "$(OK_COLOR)==> Publishing...$(NO_COLOR)"
-	@poetry publish -u $(pypi_usr) -p $(pypi_pwd)
-
-.PHONY: tag
-tag:
-	@echo "$(OK_COLOR)==> Creating tag $(version) ...$(NO_COLOR)"
-	@git tag -a "v$(version)" -m "Version $(version)"
-	@echo "$(OK_COLOR)==> Pushing tag $(version) to origin ...$(NO_COLOR)"
-	@git push origin "v$(version)"
 
 .PHONY: bump
 bump:
