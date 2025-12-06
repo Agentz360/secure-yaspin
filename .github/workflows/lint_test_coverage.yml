@@ -27,7 +27,7 @@ jobs:
       - name: install-poetry
         uses: snok/install-poetry@v1
         with:
-          version: 2.1.4
+          version: 2.2.1
 
       - name: install-dependencies
         run: |
@@ -65,7 +65,7 @@ jobs:
       - name: install-poetry
         uses: snok/install-poetry@v1
         with:
-          version: 2.1.4
+          version: 2.2.1
 
       - name: install-dependencies
         run: |
@@ -101,7 +101,7 @@ jobs:
         if: "!contains(matrix.python-version, 'pypy-3.11')"
         uses: snok/install-poetry@v1
         with:
-          version: 2.1.4
+          version: 2.2.1
 
       - name: install-dependencies
         if: "!contains(matrix.python-version, 'pypy-3.11')"
