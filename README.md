@@ -7,6 +7,7 @@
 [![Coverage](https://codecov.io/gh/pavdmyt/yaspin/branch/master/graph/badge.svg)](https://codecov.io/gh/pavdmyt/yaspin)
 [![pypi](https://img.shields.io/pypi/v/yaspin.svg)](https://pypi.org/project/yaspin/)
 [![Versions](https://img.shields.io/pypi/pyversions/yaspin.svg)](https://pypi.org/project/yaspin/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/pavdmyt/yaspin)
 
 [![Wheel](https://img.shields.io/pypi/wheel/yaspin.svg)](https://pypi.org/project/yaspin/)
 [![Examples](https://img.shields.io/badge/learn%20by-examples-0077b3.svg)](https://github.com/pavdmyt/yaspin/tree/master/examples)
